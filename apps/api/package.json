@@ -9,7 +9,8 @@
     "dev": "bun run ./src/api.ts",
     "lint": "eslint \"**/{src,test,examples,scripts,dtslint}/**/*.{ts,mjs}\"",
     "start": "bun run ./dist/api.js",
-    "test": "vitest"
+    "test": "vitest run",
+    "test:watch": "vitest --watch"
   },
   "dependencies": {
     "@effect/platform-bun": "^0.79.0",

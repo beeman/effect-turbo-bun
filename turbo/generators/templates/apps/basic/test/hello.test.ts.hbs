@@ -1,0 +1,13 @@
+import { describe, expect, it } from '@effect/vitest'
+import * as Effect from 'effect/Effect'
+import { hello } from '../src/hello.js'
+
+describe('hello', () => {
+  it.effect('should test the hello function', () =>
+    Effect.gen(function* () {
+      expect.assertions(1)
+      const res = yield* hello('Effect')
+      expect(res).toEqual('Hello, Effect!')
+    }),
+  )
+})

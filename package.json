@@ -22,5 +22,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@turbo/gen": "^2.5.6"
+  }
 }

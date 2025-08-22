@@ -1,14 +1,14 @@
 {
-  "name": "cli",
+  "name": "{{name}}",
   "version": "0.0.0",
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "bun build ./src/bin.ts --outdir ./dist --target bun",
+    "build": "bun build ./src/{{name}}.ts --outdir ./dist --target bun",
     "check-types": "tsc --noEmit",
-    "dev": "bun run ./src/bin.ts",
+    "dev": "bun run ./src/{{name}}.ts",
     "lint": "eslint \"**/{src,test,examples,scripts,dtslint}/**/*.{ts,mjs}\"",
-    "start": "bun run ./dist/bin.js",
+    "start": "bun run ./dist/{{name}}.js",
     "test": "vitest run",
     "test:watch": "vitest --watch"
   },

@@ -1,4 +1,4 @@
-import * as Effect from 'effect/Effect'
+import { Effect } from 'effect'
 
 export const hello = Effect.fn(function*(name: string) {
   yield* Effect.logInfo(`Hello, ${name}!`)

@@ -1,0 +1,9 @@
+import * as Effect from 'effect/Effect'
+import { hello } from './hello.js'
+
+Effect.runPromise(
+  Effect.gen(function* () {
+    const res = yield* hello('Effect')
+    yield* Effect.logInfo(res)
+  }),
+)
