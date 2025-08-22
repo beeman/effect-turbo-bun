@@ -1,0 +1,31 @@
+{
+  "name": "cli",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bun build ./src/bin.ts --outdir ./dist --target bun",
+    "check-types": "tsc --noEmit",
+    "dev": "bun run ./src/bin.ts",
+    "lint": "eslint \"**/{src,test,examples,scripts,dtslint}/**/*.{ts,mjs}\"",
+    "start": "bun run ./dist/bin.js",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@effect/cli": "^0.69.2",
+    "@effect/platform-bun": "^0.79.0",
+    "effect": "^3.17.8"
+  },
+  "devDependencies": {
+    "@effect/vitest": "^0.25.1",
+    "@repo/domain": "*",
+    "@repo/sdk": "*",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^22.15.3",
+    "eslint": "^9.33.0",
+    "tsx": "^4.20.4",
+    "typescript": "5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

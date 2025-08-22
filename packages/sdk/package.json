@@ -1,0 +1,25 @@
+{
+  "name": "@repo/sdk",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "lint": "eslint \"**/{src,test,examples,scripts,dtslint}/**/*.{ts,mjs}\"",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/domain": "*",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^22.15.3",
+    "eslint": "^9.33.0",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "@effect/platform": "^0.90.6",
+    "effect": "^3.17.9"
+  }
+}
