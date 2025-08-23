@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch"
+    "dev": "tsc --preserveWatchOutput --watch"
   },
   "dependencies": {
     "vitest": "^3.2.4"
