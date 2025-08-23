@@ -9,8 +9,8 @@ describe('divide', () => {
   it.effect('should succeed the divide function with a positive divisor', () =>
     Effect.gen(function* () {
       expect.assertions(1)
-      const f = yield* divide(10, 2)
-      expect(f).toEqual(5)
+      const result = yield* divide(10, 2)
+      expect(result).toEqual(5)
     }),
   )
   it.effect('should fail the divide function with a negative divisor', () =>
