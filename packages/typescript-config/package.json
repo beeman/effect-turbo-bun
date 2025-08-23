@@ -5,5 +5,8 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@effect/language-service": "^0.35.2"
   }
 }
