@@ -1,0 +1,23 @@
+name: Snapshot
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    name: Snapshot
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        uses: ./.github/actions/setup
+      - name: Build package
+        run: bun run build
+      - name: Create snapshot
+        id: snapshot
+        run: bunx pkg-pr-new@0.0.56 publish --packageManager="bun" ./packages/*

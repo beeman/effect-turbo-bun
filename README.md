@@ -8,6 +8,7 @@ This is a starter project with the following features:
 - [Bun](https://bun.com) package manager and runtime 
 - [Eslint](https://eslint.org) and [dprint](https://dprint.dev) for linting/formatting 
 - [Vitest](https://vitest.dev) for testing
+- [GitHub Actions](https://github.com/features/actions) for CI
 
 ## Structure
 
@@ -35,6 +36,11 @@ bun install
 # Make sure to do a build after the installation so that the vitest-config package gets built 
 bun turbo build
 ```
+
+This repo comes with a workflow to publish snapshots on [pkg.pr.new](https://pkg.pr.new/).
+
+Make sure to add the [pkg-pr-new app](https://github.com/apps/pkg-pr-new) to your repo or remove
+`./.github/workflows/snapshot.yml` if you're not interested in publishing them.
 
 ## Commands
 
@@ -166,7 +172,6 @@ The repo comes with the following generators:
         - `api`: an Effect api
         - `basic`: a basic Effect app
         - `cli`: an Effect cli
-
 - `pkg`
     - Generates a new package in `./packages/<name>`
     - It supports the following types:
