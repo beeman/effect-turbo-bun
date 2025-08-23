@@ -40,6 +40,7 @@ export class TodoApiGroup extends HttpApiGroup.make('todos')
       .addSuccess(Schema.Void)
       .addError(TodoNotFound, { status: 404 })
       .setPath(Schema.Struct({ id: TodoIdFromString })),
-  ) {}
+  )
+{}
 
 export class TodoApi extends HttpApi.make('api').add(TodoApiGroup) {}

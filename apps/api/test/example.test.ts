@@ -1,24 +1,23 @@
 import { describe, expect, it } from '@effect/vitest'
 import * as Effect from 'effect/Effect'
 
-const divide = Effect.fn(function* (a: number, b: number) {
+const divide = Effect.fn(function*(a: number, b: number) {
   return yield* b > 0 ? Effect.succeed(a / b) : Effect.fail('Cannot divide by zero')
 })
 
 describe('divide', () => {
   it.effect('should succeed the divide function with a positive divisor', () =>
-    Effect.gen(function* () {
+    Effect.gen(function*() {
       expect.assertions(1)
       const f = yield* divide(10, 2)
       expect(f).toEqual(5)
-    }),
-  )
+    }))
+
   it.effect('should fail the divide function with a negative divisor', () =>
-    Effect.gen(function* () {
+    Effect.gen(function*() {
       expect.assertions(1)
 
       const result = yield* Effect.flip(divide(10, 0))
       expect(result).toBe('Cannot divide by zero')
-    }),
-  )
+    }))
 })

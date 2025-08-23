@@ -5,7 +5,7 @@ import { Effect } from 'effect'
 
 export class TodoClient extends Effect.Service<TodoClient>()('cli/TodosClient', {
   accessors: true,
-  effect: Effect.gen(function* () {
+  effect: Effect.gen(function*() {
     const client = yield* HttpApiClient.make(TodoApi, {
       baseUrl: 'http://localhost:3000',
     })
