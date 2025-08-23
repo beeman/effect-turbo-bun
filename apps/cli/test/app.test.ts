@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@effect/vitest'
 import * as Effect from 'effect/Effect'
 
-describe('{{name}}', () => {
+describe('cli', () => {
   it.effect('should test Effect succeed case', () =>
     Effect.gen(function*() {
     expect.assertions(1)

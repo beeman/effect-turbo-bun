@@ -4,11 +4,11 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "bun build ./src/{{type}}.ts --outdir ./dist --target bun",
+    "build": "bun build ./src/app.ts --outdir ./dist --target bun",
     "check-types": "tsc --noEmit",
-    "dev": "bun run ./src/{{type}}.ts",
+    "dev": "bun run ./src/app.ts",
     "lint": "eslint \"**/{src,test,examples,scripts,dtslint}/**/*.{ts,mjs}\"",
-    "start": "bun run ./dist/{{type}}.js",
+    "start": "bun run ./dist/app.js",
     "test": "vitest run",
     "test:watch": "vitest --watch"
   },
@@ -23,6 +23,7 @@
     "@repo/sdk": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@repo/vitest-config": "*",
     "@types/node": "^22.15.3",
     "eslint": "^9.33.0",
     "tsx": "^4.20.4",

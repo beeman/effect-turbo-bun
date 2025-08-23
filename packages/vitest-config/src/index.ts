@@ -7,6 +7,7 @@ const exclude = [
   'turbo/generators',
   'packages/eslint-config',
   'packages/vitest-config',
+  '**/setup-tests.ts',
 ]
 
 export const sharedConfig: ViteUserConfig = {

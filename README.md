@@ -94,6 +94,13 @@ Run the `test` command in all packages in this repo:
 ```shell
 bun turbo test
 ```
+
+Run the `test` command with coverage (note: `bun run`, not `bun turbo run`):
+
+```shell
+bun run test --coverage
+```
+
 Run the `test` command in all packages in this repo in watch mode:
 
 ```shell
