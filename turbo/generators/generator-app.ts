@@ -11,7 +11,7 @@ export const generatorApp: PlopTypes.PlopGeneratorConfig = {
       type: 'list',
       name: 'type',
       message: 'What type of application should be created?',
-      choices: ['basic', 'cli', 'server'],
+      choices: ['api', 'basic', 'cli'],
     },
     {
       type: 'input',
