@@ -1,7 +1,11 @@
 {
   "name": "@repo/{{name}}",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": "./src/index.ts",
     "./*": "./src/*.ts"
@@ -13,12 +17,15 @@
     "test:watch": "vitest --watch"
   },
   "devDependencies": {
+    "@effect/vitest": "^0.25.1",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@repo/vitest-config": "*",
     "@types/node": "^22.15.3",
     "eslint": "^9.33.0",
-    "typescript": "5.9.2"
-  },
+    "typescript": "5.9.2",
+    "vitest": "^3.2.4"
+},
   "dependencies": {
     "@effect/platform": "^0.90.6",
     "effect": "^3.17.9"

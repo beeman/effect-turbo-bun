@@ -17,6 +17,7 @@
     "test:watch": "vitest --watch"
   },
   "devDependencies": {
+    "@effect/vitest": "^0.25.1",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@repo/vitest-config": "*",
