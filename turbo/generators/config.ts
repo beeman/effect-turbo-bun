@@ -1,8 +1,8 @@
 import { PlopTypes } from '@turbo/gen'
 import { generatorApp } from './generator-app'
-import { generatorLib } from './generator-lib'
+import { generatorPkg } from './generator-pkg'
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
   plop.setGenerator('app', generatorApp)
-  plop.setGenerator('lib', generatorLib)
+  plop.setGenerator('pkg', generatorPkg)
 }

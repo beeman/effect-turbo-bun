@@ -5,6 +5,7 @@
     "build": "turbo run build",
     "check-types": "turbo run check-types",
     "dev": "turbo run dev",
+    "dev:api": "turbo run dev -F @repo/api",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "test": "vitest run",
@@ -21,7 +22,7 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "bun@1.2.19",
+  "packageManager": "bun@1.2.20",
   "workspaces": [
     "apps/*",
     "packages/*"
