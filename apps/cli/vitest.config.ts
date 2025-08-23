@@ -1,12 +1,11 @@
-import path from "path"
-import { defineConfig } from "vitest/config"
+import { sharedConfig } from '@repo/vitest-config'
+import { join } from 'node:path'
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
-  plugins: [],
+  ...sharedConfig,
   test: {
-    setupFiles: [path.join(__dirname, "setupTests.ts")],
-    include: ["./test/**/*.test.ts"],
-    globals: true
+    ...sharedConfig.test,
+    setupFiles: [join(__dirname, 'setup-tests.ts')],
   },
-  resolve: {}
 })

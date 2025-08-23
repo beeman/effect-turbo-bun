@@ -23,6 +23,7 @@
     "@repo/sdk": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@repo/vitest-config": "*",
     "@types/node": "^22.15.3",
     "eslint": "^9.33.0",
     "tsx": "^4.20.4",

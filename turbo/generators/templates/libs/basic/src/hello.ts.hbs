@@ -1,5 +1,5 @@
 import { Effect } from 'effect'
 
 export const hello = Effect.fn(function*(name: string) {
-  yield* Effect.logInfo(`Hello, ${name}!`)
+  return yield* Effect.succeed(`Hello, ${name}!`)
 })

@@ -14,16 +14,20 @@
       "dependsOn": ["^check-types"]
     },
     "test": {
-      "dependsOn": ["transit"]
+      "dependsOn": ["^test", "@repo/vitest-config#build"]
     },
     "test:watch": {
       "cache": false,
       "persistent": true
     },
-    "transit": {
-      "dependsOn": ["^transit"]
-    },
     "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "//#test": {
+      "outputs": ["coverage/**"]
+    },
+    "//#test:watch": {
       "cache": false,
       "persistent": true
     }
