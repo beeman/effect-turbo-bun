@@ -11,7 +11,7 @@ export const generatorPkg: PlopTypes.PlopGeneratorConfig = {
       type: 'list',
       name: 'type',
       message: 'What type of package should be created?',
-      choices: ['basic', 'react-ui'],
+      choices: ['basic', 'db-prisma', 'react-ui'],
     },
     {
       type: 'input',

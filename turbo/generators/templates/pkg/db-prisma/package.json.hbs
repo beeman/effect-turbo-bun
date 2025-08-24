@@ -1,0 +1,40 @@
+{
+  "name": "@repo/db",
+  "version": "0.0.0",
+  "private": false,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "db:push": "bun --env-file ../../.env prisma db push",
+    "db:studio": "bun --env-file ../../.env prisma studio",
+    "db:generate": "bun --env-file ../../.env prisma generate --no-hints",
+    "db:migrate": "bun --env-file ../../.env prisma migrate dev",
+    "lint": "eslint \"**/{src,test,examples,scripts,dtslint}/**/*.{ts,mjs}\"",
+    "test": "vitest run",
+    "test:watch": "vitest --watch"
+  },
+  "devDependencies": {
+    "@effect/vitest": "^0.25.1",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@repo/vitest-config": "*",
+    "@types/node": "^22.15.3",
+    "eslint": "^9.33.0",
+    "prisma": "^6.14.0",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2",
+    "vitest": "^3.2.4"
+},
+  "dependencies": {
+    "@effect/platform": "^0.90.6",
+    "@prisma/client": "^6.14.0",
+    "effect": "^3.17.9"
+  }
+}
