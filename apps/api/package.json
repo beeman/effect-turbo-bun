@@ -22,7 +22,7 @@
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@repo/vitest-config": "*",
-    "@types/node": "^22.15.3",
+    "@types/bun": "^1.2.21",
     "eslint": "^9.33.0",
     "tsx": "^4.20.4",
     "typescript": "5.9.2",

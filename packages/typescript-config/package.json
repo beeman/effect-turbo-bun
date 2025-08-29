@@ -3,6 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
-    "@effect/language-service": "^0.35.2"
+    "@effect/language-service": "^0.36.0"
   }
 }
